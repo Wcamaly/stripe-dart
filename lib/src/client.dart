@@ -36,7 +36,7 @@ class Client {
       ..responseType = ResponseType.json
       ..contentType = 'application/x-www-form-urlencoded'
       ..headers = {
-        'Authorization': 'Basic ${base64Encode(utf8.encode('$apiKey:'))}',
+        'Authorization': 'Bearer $apiKey',
         'Stripe-Version': version,
         'Content-Type': 'application/x-www-form-urlencoded',
       };
